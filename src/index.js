@@ -60,6 +60,16 @@ class kyvMongo extends EventEmitter {
         const expiresAt = (typeof ttl === "number") ? new Date(Date.now() + ttl) : null;
         return this.mongo.update({key}, {key, value, expiresAt}, {unset : true})
     }
+
+    delete(key){
+        if(typeof key !== 'string'){
+            return Promise.resolve(false)
+        }
+        return this.mango.remove({ key }).then(obj => obj.n > 0)
+    }
+    clean(){
+        return this.mongo.remove({ key: new RegExp(`^${this.namespace}:`)}).then(() => undefined)
+    }
 }
 
 
