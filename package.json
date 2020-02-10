@@ -1,0 +1,11 @@
+{
+  "name": "mongo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Usamaliaquat123/kyv-mongo.git",
+  "author": "Usamaliaquat123 <inconnent4@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mongojs": "^3.1.0"
+  }
+}
