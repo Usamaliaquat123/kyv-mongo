@@ -55,6 +55,11 @@ class kyvMongo extends EventEmitter {
                 return doc.value
             })
     }
+
+    set(key,value,ttl) {
+        const expiresAt = (typeof ttl === "number") ? new Date(Date.now() + ttl) : null;
+        return this.mongo.update({key}, {key, value, expiresAt}, {unset : true})
+    }
 }
 
 
