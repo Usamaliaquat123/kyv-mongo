@@ -1,6 +1,6 @@
 {
-  "name": "mongo",
-  "version": "1.0.0",
+  "name": "@kyv/mongo",
+  "version": "0.0.1",
   "main": "index.js",
   "repository": "https://github.com/Usamaliaquat123/kyv-mongo.git",
   "author": "Usamaliaquat123 <inconnent4@gmail.com>",
